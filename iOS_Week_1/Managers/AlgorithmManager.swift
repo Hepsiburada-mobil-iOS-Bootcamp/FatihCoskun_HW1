@@ -39,12 +39,22 @@ class AlgoruthmManager: AlgorithmProtocol {
      Explanation: "amanaplanacanalpanama" is a palindrome.
      */
     func isPalindromTest() {
-        
+        let s = "A man, a plan, a canal: Panama"
+        let result = isPalindrome(s)
+        print("result : \(result)")
     }
     
-//    func isPalindrome(_ s: String) -> Bool {
-//
-//    }
+    func isPalindrome(_ s: String) -> Bool {
+        var value = s
+        value = value.replacingOccurrences(of: " ", with: "")
+        value = value.replacingOccurrences(of: ",", with: "")
+        value = value.replacingOccurrences(of: ":", with: "")
+        value = value.lowercased()
+        if value == String(value.reversed()) {
+            return true
+        }
+        return false
+    }
     
     // MARK: - Valid Anagram
     /*
