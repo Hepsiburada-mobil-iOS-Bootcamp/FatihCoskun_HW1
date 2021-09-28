@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 class AlgorithmManager: AlgorithmProtocol {
     
     // MARK: - Two Sum
@@ -59,12 +60,22 @@ class AlgorithmManager: AlgorithmProtocol {
      Output: true
      */
     func isAnagramTest() {
-        
+     let s = "anagram", t = "nagaram"
+     print(isAnagram(s, t))
     }
     
-//    func isAnagram(_ s: String, _ t: String) -> Bool {
-//
-//    }
+    func isAnagram(_ s: String, _ t: String) -> Bool {
+        if s.count != t.count {
+            return false
+        }
+        let a = String(s.sorted()).lowercased()
+        let b = String(t.sorted()).lowercased()
+        if a == b {
+            return true
+        }else {
+            return false
+        }
+   }
     
     // MARK: - Contains Duplicate
     /*
