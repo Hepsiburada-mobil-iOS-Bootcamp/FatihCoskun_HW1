@@ -44,7 +44,7 @@ class AlgorithmViewController: UIViewController {
     }
     
     @IBAction func missingNumberAction(_ sender: Any) {
-        // call required test function
+        algorithmManager.arrayIntersectionTest()
     }
     
     @IBAction func arrayIntersectionAction(_ sender: Any) {
